@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  datasource:
+    # Railway PostgreSQL 변수(PGHOST 등)를 앱 서비스 변수로 연결해서 사용한다.
+    # 비밀번호 등은 코드에 적지 않는다.
+    url: jdbc:postgresql://${PGHOST:localhost}:${PGPORT:5432}/${PGDATABASE:memo}
+    username: ${PGUSER:postgres}
+    password: ${PGPASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
