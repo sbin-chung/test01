@@ -7,7 +7,7 @@
 - Spring Boot 3.5 (Java 21), Gradle
 - 화면: Thymeleaf (서버 렌더링, 별도 프론트 없음)
 - DB: PostgreSQL + Spring Data JPA (`ddl-auto: update`로 테이블 자동 생성)
-- 인증: Spring Security, 비밀번호는 BCrypt (3단계에서 추가)
+- 인증: Spring Security, 비밀번호는 BCrypt
 - 배포: Railway (루트의 Dockerfile로 빌드)
 
 ## 폴더 구조
