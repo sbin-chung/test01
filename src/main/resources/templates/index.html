@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,8 +7,15 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
+<header class="topbar">
+    <span class="brand">메모장</span>
+    <form th:action="@{/logout}" method="post">
+        <button type="submit" class="link-button">로그아웃</button>
+    </form>
+</header>
 <main class="container">
-    <h1>Hello</h1>
+    <h1>Hello, <span sec:authentication="name">user</span>님</h1>
+    <p class="muted">로그인되었습니다. 메모 기능은 다음 단계에서 추가됩니다.</p>
 </main>
 </body>
 </html>
